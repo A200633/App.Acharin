@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User CRUD Tester</title>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <div class="container">
+        <h1>User CRUD API Tester</h1>
+        <p class="subtitle">ทดสอบ GET / POST / PUT / DELETE ผ่าน Web UI</p>
+
+        <!-- CREATE USER -->
+        <section>
+            <h2>POST - สร้าง User</h2>
+            <input id="post-id" placeholder="กำหนด ID (ไม่ใส่ก็ได้)">
+            <input id="post-name" placeholder="ชื่อ">
+            <input id="post-email" placeholder="อีเมล์">
+            <input id="post-role" placeholder="บทบาท (role)">
+            <button onclick="createUser()">Create</button>
+        </section>
+
+        <!-- GET ALL USERS -->
+        <section>
+            <h2>GET - ดึง Users ทั้งหมด</h2>
+            <button onclick="getUsers()">Load Users</button>
+        </section>
+
+        <!-- GET USER BY ID -->
+        <section>
+            <h2>GET - ดึง User ตาม ID</h2>
+            <input id="get-id" placeholder="User ID">
+            <button onclick="getUserById()">Get User</button>
+        </section>
+
+        <!-- UPDATE USER -->
+        <section>
+            <h2>PUT - อัปเดตข้อมูล User</h2>
+            <input id="put-id" placeholder="User ID ที่ต้องการแก้ไข">
+            <input id="put-name" placeholder="ชื่อใหม่">
+            <input id="put-email" placeholder="อีเมล์ใหม่">
+            <input id="put-role" placeholder="บทบาทใหม่">
+            <button onclick="updateUser()">Update</button>
+        </section>
+
+        <!-- DELETE USER -->
+        <section>
+            <h2>DELETE - ลบ User</h2>
+            <input id="delete-id" placeholder="User ID">
+            <button onclick="deleteUser()">Delete</button>
+        </section>
+
+        <h2>📌 ผลลัพธ์</h2>
+        <pre id="result">รอคำสั่ง...</pre>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
